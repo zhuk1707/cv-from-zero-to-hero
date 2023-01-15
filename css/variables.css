@@ -3,10 +3,13 @@
     --black: #1E1E1E;
     --grey: #CACACA;
     --light-grey: #e7e7e7;
-    --white: #fff;
+    --white: #fafafa;
     --primary: #ff5a1b;
 
 
     /*Transitions*/
     --default-transition: all .3s linear;
+
+    /*Strokes*/
+    --default-stroke: 1px solid var(--black);
 }

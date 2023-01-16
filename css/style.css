@@ -15,6 +15,11 @@ h1, h2 {
     font-family: 'Sora', sans-serif;
 }
 
+mark {
+    background-color: transparent;
+    color: var(--primary);
+}
+
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -66,6 +71,7 @@ h1, h2 {
 
 .header__burger {
     display: none;
+    transition: none;
 }
 
 .header__menu {}
@@ -105,7 +111,8 @@ h1, h2 {
 }
 
 .hero__body {
-    padding: 35px 80px 35px 40px;
+    padding: 35px 40px;
+    margin: 80px 20px;
     border-radius: 30px;
     box-shadow: 0 4px 26px 4px rgba(0, 0, 0, 0.25);
 }
@@ -118,7 +125,8 @@ h1, h2 {
 
 .hero__subtitle {
     font-weight: 500;
-    margin-top: 25px;
+    font-size: 24px;
+    margin-top: 15px;
 }
 
 .hero__buttons {
@@ -141,6 +149,64 @@ h1, h2 {
     background-color: var(--black);
 }
 
+/*-----------------------------------*/
+.page {
+}
+
+.page__about {
+    margin-bottom: 80px;
+}
+
+.about {
+}
+
+.about__title {
+}
+
+.page-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 48px;
+    /*font-size: 36px;*/
+    line-height: 1.25;
+}
+
+.about__text {
+}
+
+.page-text {
+    font-size: 20px;
+    line-height: 150%;
+}
+/*-----------------------------------*/
+.page__skills {
+    margin-bottom: 80px;
+}
+
+.skills {
+}
+
+.skills__title {
+}
+
+.page-title {
+}
+
+.skills__list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    gap: 10px 20px;
+}
+
+.skills__list:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.skills__item {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.35;
+}
 /*-----------------------------------*/
 @media (max-width: 768px) {
     body.lock {
@@ -245,11 +311,38 @@ h1, h2 {
     .hero__title {
         font-size: 48px;
     }
+
+    .hero__subtitle {
+        font-size: 20px;
+    }
+
+    .hero__buttons {
+        margin-top: 25px;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .hero__btn {
+        width: 100%;
+    }
+
+    .page-title {
+        font-size: 36px;
+    }
+
+    .page-text {
+        font-size: 16px;
+    }
+
+    .skills__list {
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+    }
 }
 
 @media (max-width: 425px) {
     .hero__body {
-        padding: 30px 20px 30px 30px;
+        margin: 40px 10px;
+        padding: 30px;
     }
 
     .hero__title {
@@ -258,14 +351,14 @@ h1, h2 {
 
     .hero__subtitle {
         margin-top: 10px;
+        font-size: 18px;
     }
 
-    .hero__buttons {
-        margin-top: 25px;
-        gap: 10px;
+    .skills__list {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
     }
 
-    .hero__btn {
-        width: 100%;
+    .skills__item {
+        font-size: 18px;
     }
 }

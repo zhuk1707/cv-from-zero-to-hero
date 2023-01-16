@@ -153,7 +153,11 @@ mark {
 .page {
 }
 
-.page__about {
+.page__about,
+.page__skills,
+.page__projects,
+.page__education,
+.page__contacts {
     margin-bottom: 80px;
 }
 
@@ -167,7 +171,6 @@ mark {
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 48px;
-    /*font-size: 36px;*/
     line-height: 1.25;
 }
 
@@ -180,7 +183,6 @@ mark {
 }
 /*-----------------------------------*/
 .page__skills {
-    margin-bottom: 80px;
 }
 
 .skills {
@@ -206,6 +208,33 @@ mark {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.35;
+}
+/*-----------------------------------*/
+.page__education {
+}
+
+.education {
+}
+
+.education__title {
+}
+
+.page-title {
+}
+
+.education__text {
+}
+
+.education__text_bold {
+    font-weight: 700;
+}
+
+.page-text {
+}
+
+.education__text_grey {
+    color: var(--grey);
+    font-weight: 500;
 }
 /*-----------------------------------*/
 @media (max-width: 768px) {

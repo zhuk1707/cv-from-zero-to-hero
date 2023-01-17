@@ -9,6 +9,8 @@ body {
     line-height: 150%;
     background-color: var(--white);
     color: var(--black);
+
+    transition: var(--default-transition);
 }
 
 h1, h2 {
@@ -74,8 +76,11 @@ mark {
     transition: none;
 }
 
-.header__menu {}
-.menu {}
+.header__menu {
+}
+
+.menu {
+}
 
 .header__list {
     display: flex;
@@ -181,6 +186,7 @@ mark {
     font-size: 20px;
     line-height: 150%;
 }
+
 /*-----------------------------------*/
 .page__skills {
 }
@@ -209,6 +215,7 @@ mark {
     font-size: 20px;
     line-height: 1.35;
 }
+
 /*-----------------------------------*/
 .page__education {
 }
@@ -236,6 +243,7 @@ mark {
     color: var(--grey);
     font-weight: 500;
 }
+
 /*-----------------------------------*/
 .page__contacts {
 }
@@ -252,10 +260,16 @@ mark {
 .contacts__text {
 }
 
+.contacts__text_location {
+    margin-top: 20px;
+    color: var(--grey);
+    font-size: 14px;
+}
+
 .page-text {
 }
 
-.contacts__link:link, .contacts__link:visited{
+.contacts__link:link, .contacts__link:visited {
     color: var(--black);
     transition: var(--default-transition);
     border-bottom: var(--default-stroke);
@@ -279,8 +293,24 @@ mark {
     flex: 0 0 30px;
 }
 
+.socials__link i {
+    font-size: 28px;
+    color: var(--black);
+    transition: var(--default-transition);
+}
+
+.socials__link:hover i {
+    color: var(--primary);
+}
+
+.socials__link:active {
+    opacity: 1;
+    transform: translateY(1px);
+}
+
 .socials__img {
 }
+
 /*-----------------------------------*/
 .footer {
     border-top: var(--lgrey-stroke);
@@ -291,6 +321,7 @@ mark {
 
 .footer__body {
     text-align: center;
+    color: var(--grey);
     margin: 30px 0 40px;
 }
 
@@ -303,6 +334,119 @@ mark {
 .footer__copyright {
     margin-top: 10px;
 }
+
+/*-----------------------------------*/
+.page__projects {
+}
+
+.projects {
+
+}
+
+.projects__title {
+}
+
+.projects__body {
+    display: flex;
+    justify-content: center;
+}
+
+.project__inner {
+}
+
+.projects__image {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.projects__image img {
+    transition: var(--default-transition);
+}
+
+.projects__image:hover img {
+    transform: scale(102%);
+    opacity: .95;
+}
+
+.projects__panel {
+    margin-top: 20px;
+}
+
+.panel-projects {
+}
+
+.panel-projects__name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--black);
+
+    transition: var(--default-transition);
+}
+
+.panel-projects__name:hover {
+    color: var(--primary);
+}
+
+.panel-projects__remote {
+    margin-top: 10px;
+}
+
+.remote {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.remote__circles {
+    display: flex;
+    gap: 8px;
+}
+
+.remote__item {
+    height: 6px;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    background-color: var(--grey);
+    cursor: pointer;
+
+    transition: var(--default-transition);
+}
+
+.remote__item.active {
+    width: 16px;
+    background-color: var(--black);
+}
+
+.remote__item:hover {
+    background-color: var(--primary);
+}
+
+
+.remote__buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.remote__button {
+    width: 44px;
+    padding: 8px;
+    border-radius: 50%;
+    border: var(--default-stroke);
+
+    transition: var(--default-transition);
+}
+
+.remote__button:hover {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.remote__button i {
+    font-size: 24px;
+}
+
 /*-----------------------------------*/
 @media (max-width: 768px) {
     body.lock {
@@ -313,7 +457,8 @@ mark {
         padding: 15px 0;
     }
 
-    .header__logo {}
+    .header__logo {
+    }
 
     .header__burger {
         display: block;
@@ -326,7 +471,7 @@ mark {
 
     .header__burger:hover span,
     .header__burger:hover::before,
-    .header__burger:hover::after{
+    .header__burger:hover::after {
         background-color: var(--primary);
     }
 
@@ -392,7 +537,8 @@ mark {
         top: 0;
     }
 
-    .menu {}
+    .menu {
+    }
 
     .header__list {
         column-gap: 0;
@@ -435,6 +581,12 @@ mark {
     }
 }
 
+@media (max-width: 542px) {
+    .projects__image {
+        border-radius: 20px;
+    }
+}
+
 @media (max-width: 425px) {
     .hero__body {
         margin: 40px 10px;
@@ -455,6 +607,19 @@ mark {
     }
 
     .skills__item {
+        font-size: 18px;
+    }
+
+    .projects__image {
+        border-radius: 13px;
+    }
+
+    .remote__button {
+        padding: 6px;
+        width: 36px;
+    }
+
+    .remote__button i {
         font-size: 18px;
     }
 }

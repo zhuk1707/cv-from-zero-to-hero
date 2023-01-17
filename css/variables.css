@@ -8,7 +8,7 @@
 
 
     /*Transitions*/
-    --default-transition: all .3s linear;
+    --default-transition: all .15s ease;
 
     /*Strokes*/
     --default-stroke: 1px solid var(--black);

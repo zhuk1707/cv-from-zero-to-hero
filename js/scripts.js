@@ -73,6 +73,6 @@ function displaySliderCount(current, length) {
   remoteCircles.innerHTML = circlesHTML
 }
 
-let currentProjectNum = 2
+let currentProjectNum = 0
 showProject(currentProjectNum)
 displaySliderCount(currentProjectNum, projects.length)

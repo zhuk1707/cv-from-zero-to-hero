@@ -132,7 +132,7 @@ mark {
 
 .hero__subtitle {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 22px;
     margin-top: 15px;
 }
 
@@ -146,6 +146,7 @@ mark {
 .hero__btn {
     cursor: pointer;
     padding: 6px 15px 7px;
+    text-align: center;
     color: var(--black);
     border: var(--default-stroke);
     border-radius: 50px;
@@ -192,6 +193,7 @@ mark {
     font-size: 20px;
     line-height: 1.35;
 }
+
 .projects__title {
     margin-bottom: 15px;
 }
@@ -249,15 +251,26 @@ mark {
 
 .remote__item {
     height: 6px;
-    aspect-ratio: 1;
-    border-radius: 8px;
+    width: 6px;
+    border-radius: 3px;
     background-color: var(--grey);
     transition: var(--default-transition);
 }
 
 .remote__item.active {
-    width: 16px;
+    width: 26px;
     background-color: var(--black);
+
+    animation: anim .15s linear 1;
+}
+
+@keyframes anim {
+    0% {
+        width: 6px;
+    }
+    100% {
+        width: 26px;
+    }
 }
 
 .remote__buttons {
@@ -526,3 +539,4 @@ mark {
         font-size: 18px;
     }
 }
+
